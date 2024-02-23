@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'FlaskLoanPrediction'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7304BAA81630417FB3973D7644F52566 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D7BC91111A474268BF3CD6F19C70DC40 }}
