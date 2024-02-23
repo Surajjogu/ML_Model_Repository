@@ -9,7 +9,7 @@ Created on Wed Oct 11 15:00:36 2023
 import pandas as pd
 
 #import data
-dataset = pd.read_csv(r"C:\Users\kalpavruksh_sjo\Downloads\loan_sanction_train.csv")
+dataset = pd.read_csv(r"loan_sanction_train.csv")
 
 #View top 10 rows from dataset
 dataset.head()
