@@ -72,9 +72,9 @@ y_pred = rfc.predict(X_test)
 
 #dumping the model object
 import pickle
-pickle.dump(rfc, open('model.pkl', 'wb'))
+pickle.dump(rfc, open('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/model.pkl', 'wb'))
 
 #Reloading the model object
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/model.pkl','rb'))
 #print(rfc.predict([['LP008000','Male','Yes',1,'Graduate','Yes',4000,0,100,180,1,'Rural']]))
 print(model.predict([[1,1,1,1,4000,0,100,180,1,1,0,0]]))
