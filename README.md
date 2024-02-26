@@ -5,3 +5,5 @@
 - `loan_sanction_train`: dataset used for training
 - `index.html`: front-end application for prediction
 - `Model.py`: python code for model development.
+- `LICENSE': License file.
+- `requirements.txt': requirement related file.
