@@ -70,11 +70,20 @@ rfc.fit(X_train,y_train)
 y_pred = rfc.predict(X_test)
 
 
-#dumping the model object
+#dumping the model object into the Git repository
 import pickle
-pickle.dump(rfc, open('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/model.pkl', 'wb'))
+import os
 
-#Reloading the model object
-model = pickle.load(open('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/model.pkl','rb'))
+# Define the path to save the model within the Git repository
+model_path = os.path.join("ML_Model_Repository", "model.pkl")
+
+# Save the model to the defined path
+pickle.dump(rfc, open(model_path, 'wb'))
+
+print("Model saved to:", model_path)
+
+# Uncomment the following line if you want to reload the model immediately
+#model = pickle.load(open(model_path, 'rb'))
+
 #print(rfc.predict([['LP008000','Male','Yes',1,'Graduate','Yes',4000,0,100,180,1,'Rural']]))
-print(model.predict([[1,1,1,1,4000,0,100,180,1,1,0,0]]))
+#print(model.predict([[1,1,1,1,4000,0,100,180,1,1,0,0]]))
