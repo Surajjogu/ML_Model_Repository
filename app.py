@@ -14,7 +14,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/index.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
