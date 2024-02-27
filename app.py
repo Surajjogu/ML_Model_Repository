@@ -10,11 +10,11 @@ import numpy as np
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('https://github.com/Surajjogu/ML_Model_Repository/main/model.pkl', 'rb'))
+model = pickle.load(open('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/model.pkl', 'rb'))
 
 @app.route('/')
-def home():
-    return render_template('https://github.com/Surajjogu/ML_Model_Repository/main/index.html')
+def index():
+    return render_template('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/index.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -24,7 +24,7 @@ def predict():
     
     output = prediction[0]
     
-    return render_template('https://github.com/Surajjogu/ML_Model_Repository/main/index.html', prediction_text='Loan Eligibility = {}'.format(output))
+    return render_template('https://raw.githubusercontent.com/Surajjogu/ML_Model_Repository/main/index.html', prediction_text='Loan Eligibility = {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
