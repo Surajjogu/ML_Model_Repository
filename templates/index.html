@@ -115,10 +115,6 @@
     </form>
     <button type="submit" class="btn" onclick="predictLoanEligibility()">Predict Loan Eligibility</button>
     <div class="prediction" id="predictionResult">
-      {% if prediction_text %}
-        <h3>Prediction Result:</h3>
-        <p>{{ prediction_text }}</p>
-      {% endif %}
     </div>
     <br><br>
     <div>
@@ -144,7 +140,7 @@
       var education = document.getElementById("Urban").value;
 
       // Perform prediction (You can add your prediction logic here)
-      var prediction = 1;
+      var prediction = {{ prediction_text }};
 
       // Display prediction result
       document.getElementById("predictionResult").innerHTML = "<h3>Prediction Result:</h3><p>" + (prediction ? "Eligible" : "Not Eligible") + "</p>";
