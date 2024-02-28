@@ -144,10 +144,10 @@
       var education = document.getElementById("Urban").value;
 
       // Perform prediction (You can add your prediction logic here)
-      var prediction = "Your prediction result goes here.";
+      var prediction = 1;
 
       // Display prediction result
-      document.getElementById("predictionResult").innerHTML = "<h3>Prediction Result:</h3><p>" + prediction + "</p>";
+      document.getElementById("predictionResult").innerHTML = "<h3>Prediction Result:</h3><p>" + (prediction ? "Eligible" : "Not Eligible") + "</p>";
     }
     function resetForm() {
       document.getElementById("predictionForm").reset();
