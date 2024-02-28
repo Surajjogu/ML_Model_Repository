@@ -113,8 +113,12 @@
       </div>
       <br><br>
     </form>
-    <button type="submit" class="btn" onclick="predictLoanEligibility()">Predict Loan Eligibility</button>
+    <button type="submit" class="btn">Predict Loan Eligibility</button>
     <div class="prediction" id="predictionResult">
+       {% if prediction_text %}
+        <h3>Prediction Result:</h3>
+        <p>{{ prediction_text }}</p>
+      {% endif %}     
     </div>
     <br><br>
     <div>
@@ -124,29 +128,8 @@
     </div>
   </div>
   <script>
-    function predictLoanEligibility() {
-      // Fetch form data
-      var married = document.getElementById("Married").value;
-      var dependents = document.getElementById("Dependents").value;
-      var education = document.getElementById("Education").value;
-      var education = document.getElementById("Self_Employed").value;
-      var education = document.getElementById("ApplicantIncome").value;
-      var education = document.getElementById("CoApplicantIncome").value;
-      var education = document.getElementById("LoanAmount").value;
-      var education = document.getElementById("LoanAmount_Term").value;
-      var education = document.getElementById("Credit_History").value;
-      var education = document.getElementById("Gender").value;
-      var education = document.getElementById("Semiurban").value;
-      var education = document.getElementById("Urban").value;
-
-      // Perform prediction (You can add your prediction logic here)
-      var prediction = {{ prediction_text }};
-
-      // Display prediction result
-      document.getElementById("predictionResult").innerHTML = "<h3>Prediction Result:</h3><p>" + (prediction ? "Eligible" : "Not Eligible") + "</p>";
-    }
     function resetForm() {
-      document.getElementById("predictionForm").reset();
+      document.getElementById("loanForm").reset();
       document.getElementById("predictionResult").innerHTML = "";
     });
 </body>
