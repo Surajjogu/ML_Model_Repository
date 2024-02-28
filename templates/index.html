@@ -65,51 +65,51 @@
     <form id="loanForm" action="{{ url_for('predict') }}" method="post">
       <div class="form-group">
         <label for="Married">Married:</label>
-        <input type="int" name="Married" placeholder="(1 = Yes, 2 = No)" required="required"/>
+        <input type="int" id="Married" name="Married" placeholder="(1 = Yes, 2 = No)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Dependents">Dependents:</label>
-        <input type="int" name="Dependents" placeholder="(1-3)" required="required"/>
+        <input type="int" id="Dependents" name="Dependents" placeholder="(1-3)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Education">Education:</label>
-        <input type="int" name="Education" placeholder="(1 = Yes, 2 = No)" required="required"/>
+        <input type="int" id="Education" name="Education" placeholder="(1 = Yes, 2 = No)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Self_Employed">Self_Employed:</label>
-        <input type="int" name="Self_Employed" placeholder="(1 = Yes, 2 = No)" required="required"/>
+        <input type="int" id="Self_Employed" name="Self_Employed" placeholder="(1 = Yes, 2 = No)" required="required"/>
       </div>
       <div class="form-group">
         <label for="ApplicantIncome">ApplicantIncome:</label>
-        <input type="int" name="ApplicantIncome" placeholder="(1k-10k)" required="required"/>
+        <input type="int" id="ApplicantIncome" name="ApplicantIncome" placeholder="(1k-10k)" required="required"/>
       </div>
       <div class="form-group">
         <label for="CoApplicantIncome">CoApplicantIncome:</label>
-        <input type="int" name="CoApplicantIncome" placeholder="(1k-10k)" required="required"/>
+        <input type="int" id="CoApplicantIncome" name="CoApplicantIncome" placeholder="(1k-10k)" required="required"/>
       </div>
       <div class="form-group">
         <label for="LoanAmount">LoanAmount:</label>
-        <input type="int" name="LoanAmount" placeholder="(100-1000)" required="required"/>
+        <input type="int" id="LoanAmount" name="LoanAmount" placeholder="(100-1000)" required="required"/>
       </div>
       <div class="form-group">
         <label for="LoanAmount_Term">LoanAmount_Term:</label>
-        <input type="int" name="LoanAmount_Term" placeholder="(12/36/60/120/180/240/300/360/480)" required="required"/>
+        <input type="int" id="LoanAmount_Term" name="LoanAmount_Term" placeholder="(12/36/60/120/180/240/300/360/480)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Credit_History">Credit_History:</label>
-        <input type="int" name="Credit_History" placeholder="(1 = Yes, 0 = No)" required="required"/>
+        <input type="int" id="Credit_History" name="Credit_History" placeholder="(1 = Yes, 0 = No)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Gender">Gender:</label>
-        <input type="int" name="Gender_Male" placeholder="(1 = Male, 2 = Female)" required="required"/>
+        <input type="int" id="Gender_Male" name="Gender_Male" placeholder="(1 = Male, 2 = Female)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Semiurban">Semiurban:</label>
-        <input type="int" name="Semiurban" placeholder="(1 If Semiurban)" required="required"/>
+        <input type="int" id="Semiurban" name="Semiurban" placeholder="(1 If Semiurban)" required="required"/>
       </div>
       <div class="form-group">
         <label for="Urban">Urban:</label>
-        <input type="int" name="Urban" placeholder="(1 If Urban)" required="required"/>
+        <input type="int" id="Urban" name="Urban" placeholder="(1 If Urban)" required="required"/>
       </div>
       <br><br>
       <button type="submit" class="btn">Predict Loan Eligibility</button>
@@ -122,6 +122,7 @@
     </div>
     <br><br>
     <div>
+        <form action="{{ url_for('home') }}" method="get">
         <button type="button" class="btn" onclick="resetForm()">New Prediction</button>
       </form>
     </div>
