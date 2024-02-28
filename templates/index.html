@@ -114,7 +114,7 @@
       <br><br>
        <button type="submit" class="btn">Predict Loan Eligibility</button>
     </form>
-    <div class="prediction" id="predictionResult">
+    <div class="prediction">
        {% if prediction_text %}
         <h3>Prediction Result:</h3>
         <p>{{ prediction_text }}</p>
@@ -122,7 +122,7 @@
     </div>
     <br><br>
     <div>
-        <form action="{{ url_for('home') }}" method="get">
+      <form action="{{ url_for('home') }}" method="get">
         <button type="submit" class="btn" onclick="resetForm()">New Prediction</button>
       </form>
     </div>
