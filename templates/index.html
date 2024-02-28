@@ -114,7 +114,7 @@
       <br><br>
       <button type="submit" class="btn">Predict Loan Eligibility</button>
     </form>
-    <div class="prediction">
+    <div class="prediction" id="predictionResult">
       {% if prediction_text %}
         <h3>Prediction Result:</h3>
         <p>{{ prediction_text }}</p>
@@ -122,14 +122,14 @@
     </div>
     <br><br>
     <div>
-        <button id="newPrediction" class="btn">New Prediction</button>
+        <button type="button" class="btn" onclick="resetForm()">New Prediction</button>
       </form>
     </div>
   </div>
   <script>
-    document.getElementById('newPrediction').addEventListener('click', function() {
-      document.getElementById('loanForm').reset();
-      document.querySelector('.prediction').innerHTML = '';
+    function resetForm() {
+      document.getElementById("predictionForm").reset();
+      document.getElementById("predictionResult").innerHTML = "";
     });
 </body>
 </html>
