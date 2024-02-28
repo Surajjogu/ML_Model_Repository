@@ -52,6 +52,10 @@
       font-size: 14px;
       color: #666;
     }
+    .prediction {
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -110,6 +114,12 @@
       <br><br>
       <button type="submit" class="btn">Predict Loan Eligibility</button>
     </form>
+    <div class="prediction">
+      {% if prediction_text %}
+        <h3>Prediction Result:</h3>
+        <p>{{ prediction_text }}</p>
+      {% endif %}
+    </div>
     <br><br>
     <div>
       <form action="{{ url_for('home') }}" method="get">
