@@ -23,7 +23,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential python3-dev
+          sudo apt-get install -y build-essential python3-dev libatlas-base-dev libblas-dev liblapack-dev
 
       - name: Create and start virtual environment
         run: |
@@ -32,11 +32,11 @@ jobs:
 
       - name: Upgrade pip and setuptools
         run: |
-          pip install --upgrade pip setuptools
+          pip install --upgrade pip setuptools==59.5.0  # Ensure we're using a compatible version
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install --no-cache-dir -r requirements.txt  # Install without cache to avoid previous failures
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       # - name: Run tests
